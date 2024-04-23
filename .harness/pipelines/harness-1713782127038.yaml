@@ -33,7 +33,7 @@ pipeline:
                   name: docker_build
                   spec:
                     connectorRef: account.harnessImage
-                    repo: test_1
+                    repo: ramyameena/test_1
                     tags:
                       - latest
                     caching: true
