@@ -39,6 +39,17 @@ pipeline:
                     caching: true
                   timeout: ""
                   type: BuildAndPushDockerRegistry
+              - step:
+                  type: BuildAndPushECR
+                  name: BuildAndPushECR_2
+                  identifier: BuildAndPushECR_2
+                  spec:
+                    connectorRef: account.AWS_Connector
+                    region: ap-south-1
+                    account: "637423207302"
+                    imageName: Harness_test
+                    tags:
+                      - version1
           platform:
             os: Linux
             arch: Amd64
