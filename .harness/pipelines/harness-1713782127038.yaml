@@ -47,7 +47,7 @@ pipeline:
                     connectorRef: account.AWS_Connector
                     region: ap-south-1
                     account: "637423207302"
-                    imageName: Harness_test
+                    imageName: harness_test
                     tags:
                       - version1
           platform:
