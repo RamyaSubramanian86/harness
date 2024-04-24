@@ -45,9 +45,9 @@ pipeline:
                   identifier: BuildAndPushECR_2
                   spec:
                     connectorRef: account.AWS_Connector
-                    region: ap-south-1
+                    region: us-east-1
                     account: "637423207302"
-                    imageName: harness_test
+                    imageName: ramyatest
                     tags:
                       - version1
           platform:
