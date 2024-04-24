@@ -47,7 +47,7 @@ pipeline:
                     connectorRef: account.AWS_Connector
                     region: us-east-1
                     account: "637423207302"
-                    imageName: ramyatest
+                    imageName: ramya_test1
                     tags:
                       - version1
           platform:
