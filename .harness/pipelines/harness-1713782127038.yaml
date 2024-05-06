@@ -57,3 +57,29 @@ pipeline:
             type: Cloud
             spec: {}
         type: CI
+    - stage:
+        name: Approval
+        identifier: Approval
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: Harness_approval
+                  identifier: Harness_approval
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - Approval_group
+                    isAutoRejectEnabled: false
+                    approverInputs: []
+        tags: {}
